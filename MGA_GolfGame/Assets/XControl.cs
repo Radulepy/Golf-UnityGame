@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 //TODO:
 // subtract force variable
 // check if ball position is under the Track (Ball falls of the board) & reset level
-public class BallControll : MonoBehaviour
+public class XControl : MonoBehaviour
 {
     public float zForce = 0; // gravity 'Z' Button
 
@@ -18,12 +18,9 @@ public class BallControll : MonoBehaviour
 
     public Camera MainCam; // camera Obj
 
-
     // Update is called once per frame
     void Update()
     {
-
-        // transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         if (Input.GetKeyDown("z")) // adds 100 force
         {
             zForce += 100;
@@ -32,54 +29,53 @@ public class BallControll : MonoBehaviour
         {
             zForce += 10;
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKeyDown("d"))
         {
             transform.Rotate(0, 5, 0);
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKeyDown("a"))
         {
             transform.Rotate(0, -5, 0);
         }
-        if ((GetComponent<Rigidbody>().velocity == Vector3.zero) && (rotationReset == false))
-        { 
-            GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
-            transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+        if ((GetComponent<Rigidbody>().velocity == Vector3.zero) && (rotationReset = false))
+        {
+
             rotationReset = true;
+            Vector3 newRotation = transform.eulerAngles;
+            newRotation.y = MainCam.transform.eulerAngles.y;
+            transform.eulerAngles = newRotation;
+
         }
 
-        if((isMoving == true )&&( GetComponent<Rigidbody>().velocity == Vector3.zero))
+        if (GetComponent<Rigidbody>().velocity == Vector3.zero)
         {
-            rotationReset = false;
-            isMoving = false;
+            GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow invisible
         }
-
-        //TODOO: DE ALES RI LAS ASTEA 3 DE JOS ORI NUMAI ULTIMA ( COMENTATA )
-
-        //  Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        // MainCam.transform.LookAt(targetPosition);
-        //MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // ASTAAAAAAAAAA
-
-
-        if (Input.GetKey("space")) // shoots with space key
+        else
         {
-            shoot();
+            GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // make arrow visible
         }
+
+
+        MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
 
     }
 
-    void shoot()
+    void OnMouseDown()
     {
+
+
         if (GetComponent<Rigidbody>().velocity == Vector3.zero)
         {
-           
 
-            GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // make arrow invisible
 
- 
+            GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // MAKE INVISIBLE
+
             GetComponent<Rigidbody>().AddRelativeForce(0, 0, zForce); // X Y Z
 
-            isMoving = true;
+
         }
+
 
     }
 
