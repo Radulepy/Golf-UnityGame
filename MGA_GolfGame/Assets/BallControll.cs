@@ -57,7 +57,9 @@ public class BallControll : MonoBehaviour
 
         //  Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // MainCam.transform.LookAt(targetPosition);
-        //MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // ASTAAAAAAAAAA
+
+
+        MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // ASTA FACE CAMERA SA MEARGA DUPA MINGE (POATE SA ADAUGAM O OPTIUNE)
 
 
         if (Input.GetKey("space")) // shoots with space key
