@@ -53,13 +53,13 @@ public class BallControll : MonoBehaviour
             isMoving = false;
         }
 
-        //TODOO: DE ALES RI LAS ASTEA 3 DE JOS ORI NUMAI ULTIMA ( COMENTATA )
+        // camera settings:
 
         //  Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // MainCam.transform.LookAt(targetPosition);
 
 
-        MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // ASTA FACE CAMERA SA MEARGA DUPA MINGE (POATE SA ADAUGAM O OPTIUNE)
+        MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // CAMERA FOLLOWING THE BALL 
 
 
         if (Input.GetKey("space")) // shoots with space key
