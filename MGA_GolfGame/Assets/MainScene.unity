@@ -181,6 +181,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 18.619001, y: 43.338, z: 46.259003}
+--- !u!1 &172821659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4636002140556026561, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4636002140198011165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &172821660 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4636002140556197601, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4636002140198011165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +577,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636002139433334093, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: arrowSign
+      value: 
+      objectReference: {fileID: 172821659}
+    - target: {fileID: 4636002139433334093, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: aimArrow
+      value: 
+      objectReference: {fileID: 172821660}
+    - target: {fileID: 4636002139433334093, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: zScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636002140556197601, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636002140556197601, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636002140556197603, guid: 2e86cfa21f8d2f340952f61914fdee9f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e86cfa21f8d2f340952f61914fdee9f, type: 3}

@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
 
+//MAXIM VALUES:
+// Force = 1000
+// Scale = 6
+
 //TODO:
 // subtract force variable
 // check if ball position is under the Track (Ball falls of the board) & reset level
 public class BallControll : MonoBehaviour
 {
     public float zForce = 0; // gravity 'Z' Button
+    public float zScale = 1;
 
     public bool isMoving = false;
     public bool rotationReset = false;
@@ -18,19 +23,27 @@ public class BallControll : MonoBehaviour
 
     public Camera MainCam; // camera Obj
 
+    public GameObject arrowSign;
+
 
     // Update is called once per frame
     void Update()
     {
 
+
         // transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        if (Input.GetKeyDown("z")) // adds 100 force
+        if (Input.GetKeyDown("w") && zForce < 1000) // adds 100 force
         {
             zForce += 100;
+            zScale += 0.5f;
+            arrowSign.transform.localScale = new Vector3(zScale, 1, 1);
         }
-        if (Input.GetKeyDown("x")) // adds 10 force
+        if (Input.GetKeyDown("s") && zForce > 0) // adds 10 force
         {
-            zForce += 10;
+            zForce -= 50;
+            zScale -= 0.25f;
+            aimArrow.GetComponent<Transform>().localScale = new Vector3(zScale, 1, 1);
+
         }
         if (Input.GetKey("d"))
         {
@@ -41,13 +54,13 @@ public class BallControll : MonoBehaviour
             transform.Rotate(0, -5, 0);
         }
         if ((GetComponent<Rigidbody>().velocity == Vector3.zero) && (rotationReset == false))
-        { 
+        {
             GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
             transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
             rotationReset = true;
         }
 
-        if((isMoving == true )&&( GetComponent<Rigidbody>().velocity == Vector3.zero))
+        if ((isMoving == true) && (GetComponent<Rigidbody>().velocity == Vector3.zero))
         {
             rotationReset = false;
             isMoving = false;
@@ -55,12 +68,12 @@ public class BallControll : MonoBehaviour
 
         // camera settings:
 
-          Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-         MainCam.transform.LookAt(targetPosition);
+        Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        MainCam.transform.LookAt(targetPosition);
 
 
 
-       // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
+        // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
 
         MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // CAMERA FOLLOWING THE BALL 
 
@@ -71,30 +84,46 @@ public class BallControll : MonoBehaviour
             shoot();
         }
 
+        // TODO: SET COLOR
+        if (zScale == 1)
+        {
+            arrowSign.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+
+        }
+        if(zScale != 1)
+        {
+            arrowSign.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
+        }
+
     }
 
     void shoot()
     {
         if (GetComponent<Rigidbody>().velocity == Vector3.zero)
         {
-           
+
 
             GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // make arrow invisible
 
- 
+
             GetComponent<Rigidbody>().AddRelativeForce(0, 0, zForce); // X Y Z
 
             isMoving = true;
+            // Reset values:
+            zForce = 0;
+            zScale = 1;
+        
+
+
+    }
+
+        void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("BALL COLIDED WITH TRIGGER");
+            EditorSceneManager.LoadScene("MainScene"); // go to next scene after ball entered hole
         }
 
+
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("BALL COLIDED WITH TRIGGER");
-        EditorSceneManager.LoadScene("MainScene"); // go to next scene after ball entered hole
-    }
-
-
 }
 // update
