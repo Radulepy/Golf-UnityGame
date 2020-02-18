@@ -60,7 +60,7 @@ public class BallControll : MonoBehaviour
 
 
 
-       // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // ASTA FACE CAMERA SA MEARGA DUPA MINGE (POATE SA ADAUGAM O OPTIUNE)
+       // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
 
         MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // CAMERA FOLLOWING THE BALL 
 
@@ -97,3 +97,4 @@ public class BallControll : MonoBehaviour
 
 
 }
+// update
