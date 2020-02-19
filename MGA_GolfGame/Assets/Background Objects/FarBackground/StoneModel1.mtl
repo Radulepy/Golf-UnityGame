@@ -1,0 +1,77 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl natureKit-wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.682 0.435 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-leavesGreen (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.353 0.769 0.714 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.682 0.435 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-leavesGreen (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.353 0.769 0.714 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-_defaultMat (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.659 0.808 0.827 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-stone (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.659 0.808 0.827 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.725 0.753 0.788 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Leafs (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.271 0.408 0.4 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.545 0.357 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-leavesFall (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.949 0.553 0.145 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-wood (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.682 0.435 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-leavesFall (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.949 0.553 0.145 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Leafs (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.271 0.408 0.4 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.545 0.357 
+Ks 0.330000 0.330000 0.330000 
+

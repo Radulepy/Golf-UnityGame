@@ -24,6 +24,8 @@ public class BallControll : MonoBehaviour
 
     public GameObject arrowSign;
 
+    PlayerStats playerStats = new PlayerStats();
+
 
     // Update is called once per frame
     void Update()
@@ -63,6 +65,9 @@ public class BallControll : MonoBehaviour
             GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
             transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
             rotationReset = true;
+            
+            playerStats.nrOfShots++; // COUNTS THE NR OF SHOTS!
+            Debug.Log(playerStats.nrOfShots);
         }
 
         if ((isMoving == true) && (GetComponent<Rigidbody>().velocity == Vector3.zero))
@@ -110,7 +115,7 @@ public class BallControll : MonoBehaviour
         Debug.Log("Touched The Ground!");
 
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3); // TODO SET A RESTART BUTTON VISIBLE!
 
         Destroy(gameObject);
         
@@ -120,7 +125,7 @@ public class BallControll : MonoBehaviour
     {
         if (GetComponent<Rigidbody>().velocity == Vector3.zero)
         {
-
+            
 
             GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // make arrow invisible
 
@@ -131,10 +136,11 @@ public class BallControll : MonoBehaviour
             // Reset values:
             zForce = 0;
             zScale = 1;
-        
+
+            
 
 
-    }
+        }
 
         void OnTriggerEnter(Collider other)
         {
