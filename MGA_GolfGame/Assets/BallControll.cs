@@ -18,7 +18,6 @@ public class BallControll : MonoBehaviour
     public bool isMoving = false;
     public bool rotationReset = false;
 
-
     public Transform aimArrow;
 
     public Camera MainCam; // camera Obj
@@ -29,6 +28,12 @@ public class BallControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < 0.05f) // BALL FELT OF THE TRACK! (RESTART)
+        {
+
+            StartCoroutine(ExampleCoroutine());
+
+        }
 
 
         // transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -95,6 +100,20 @@ public class BallControll : MonoBehaviour
             arrowSign.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
         }
 
+    }
+
+
+
+    IEnumerator ExampleCoroutine()
+    {
+
+        Debug.Log("Touched The Ground!");
+
+
+        yield return new WaitForSeconds(3);
+
+        Destroy(gameObject);
+        
     }
 
     void shoot()
