@@ -1,0 +1,62 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl Wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.545 0.357 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Green_leafs (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.298 0.529 0.427 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.667 0.545 0.357 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Green_leafs (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.298 0.529 0.427 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.725 0.753 0.788 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Leafs (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.270588 0.407843 0.4 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Light_Wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.937255 0.764706 0.501961 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl customMaterial9 (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.1939708 0.3599213 0.05785759 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl FrontColor (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl FrontColor (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-_defaultMat (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl natureKit-mushroom (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8784314 0.2901961 0.3137255 
+Ks 0.330000 0.330000 0.330000 
+
