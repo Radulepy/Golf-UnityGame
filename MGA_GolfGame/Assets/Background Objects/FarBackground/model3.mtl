@@ -1,0 +1,122 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl roof (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2588235 0.6784314 0.5294118 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9098039 0.5490196 0.3490196 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6039216 0.7333333 0.7882353 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofLight (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2862745 0.7568628 0.5921569 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl _defaultMat (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl woodDark (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7764706 0.4666667 0.2941177 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRed (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6784314 0.2588235 0.2980392 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRedLight (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8470588 0.3215686 0.372549 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl woodDark (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7764706 0.4666667 0.2941177 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl wood (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9098039 0.5490196 0.3490196 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRed (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6784314 0.2588235 0.2980392 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRedLight (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8470588 0.3215686 0.372549 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl woodDark (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7764706 0.4666667 0.2941177 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRed (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6784314 0.2588235 0.2980392 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roofRedLight (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8470588 0.3215686 0.372549 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6039216 0.7333333 0.7882353 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl wood (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9098039 0.5490196 0.3490196 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6039216 0.7333333 0.7882353 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl wood (Instance) (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9098039 0.5490196 0.3490196 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6039216 0.7333333 0.7882353 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl wood (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9098039 0.5490196 0.3490196 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl stone (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6039216 0.7333333 0.7882353 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl foliage (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2265931 0.7169812 0.5854273 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl foliage (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2265931 0.7169812 0.5854273 
+Ks 0.330000 0.330000 0.330000 
+
