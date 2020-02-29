@@ -12,11 +12,12 @@ using UnityEditor.SceneManagement;
 // check if ball position is under the Track (Ball falls of the board) & reset level
 public class BallControll : MonoBehaviour
 {
-    public float zForce = 0; // gravity 'Z' Button
+    public float zForce = 25; // gravity 'Z' Button
     public float zScale = 1;
 
     public bool isMoving = false;
     public bool rotationReset = false;
+    public bool count = false;
 
     public Transform aimArrow;
 
@@ -25,6 +26,8 @@ public class BallControll : MonoBehaviour
     public GameObject arrowSign;
 
     PlayerStats playerStats = new PlayerStats();
+
+
 
 
     // Update is called once per frame
@@ -66,14 +69,14 @@ public class BallControll : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
             rotationReset = true;
             
-            playerStats.nrOfShots++; // COUNTS THE NR OF SHOTS!
-            Debug.Log(playerStats.nrOfShots);
+            
         }
 
         if ((isMoving == true) && (GetComponent<Rigidbody>().velocity == Vector3.zero))
         {
             rotationReset = false;
             isMoving = false;
+            count = true;
         }
 
         // camera settings:
@@ -83,7 +86,7 @@ public class BallControll : MonoBehaviour
 
 
 
-        // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
+       // MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
 
         MainCam.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;  // CAMERA FOLLOWING THE BALL 
 
@@ -116,10 +119,17 @@ public class BallControll : MonoBehaviour
         Debug.Log("Touched The Ground!");
 
 
-        yield return new WaitForSeconds(3); // TODO SET A RESTART BUTTON VISIBLE!
+        yield return new WaitForSeconds(2); // TODO SET A RESTART BUTTON VISIBLE!
 
-        Destroy(gameObject);
-        
+
+        //UnityEditor.PrefabUtility.ResetToPrefabState(this.gameObject);
+       // UnityEditor.PrefabUtility.ResetToPrefabState(MainCam.gameObject);
+       gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f);
+        MainCam.transform.position = new Vector3(-0f, 1.25f, -6f);
+         Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        MainCam.transform.LookAt(targetPosition);
+        //Destroy(gameObject);
+
     }
 
     void shoot()
@@ -133,12 +143,23 @@ public class BallControll : MonoBehaviour
 
             GetComponent<Rigidbody>().AddRelativeForce(0, 0, zForce); // X Y Z
 
+
             isMoving = true;
             // Reset values:
-            zForce = 0;
+            zForce = 25;
             zScale = 1;
 
-            
+            if(count == true)
+            {
+                playerStats.addShot();
+              //  Debug.Log(playerStats.nrOfShots);
+             
+                count = false;
+
+            }
+
+
+
 
 
         }

@@ -8,7 +8,7 @@ using UnityEditor.SceneManagement;
 // check if ball position is under the Track (Ball falls of the board) & reset level
 public class XControl : MonoBehaviour
 {
-    public float zForce = 0; // gravity 'Z' Button
+    public float zForce = 5; // gravity 'Z' Button
 
     public bool isMoving = false;
     public bool rotationReset = false;

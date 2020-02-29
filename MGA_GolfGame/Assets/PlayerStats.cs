@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int nrOfShots = 0;
+    public static int nrOfShots = 1;
+
+    public Text ShotsText;
 
     void Start()
     {
@@ -15,11 +18,17 @@ public class PlayerStats : MonoBehaviour
     {
         nrOfShots+=1;
         Debug.Log(nrOfShots);
+
+    }
+
+    public int getShots()
+    {
+        return nrOfShots;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ShotsText.text = "Hits: " + nrOfShots.ToString();
     }
 }
