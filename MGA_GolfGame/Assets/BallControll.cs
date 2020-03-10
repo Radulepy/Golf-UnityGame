@@ -65,11 +65,15 @@ public class BallControll : MonoBehaviour
         }
         if ((GetComponent<Rigidbody>().velocity == Vector3.zero) && (rotationReset == false))
         {
+
+
             GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
             transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
             rotationReset = true;
-            
-            
+
+
+          
+
         }
 
         if ((isMoving == true) && (GetComponent<Rigidbody>().velocity == Vector3.zero))
@@ -121,15 +125,21 @@ public class BallControll : MonoBehaviour
 
         yield return new WaitForSeconds(2); // TODO SET A RESTART BUTTON VISIBLE!
 
+        GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // arrow invisible 
+
 
         //UnityEditor.PrefabUtility.ResetToPrefabState(this.gameObject);
-       // UnityEditor.PrefabUtility.ResetToPrefabState(MainCam.gameObject);
-       gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f);
+        // UnityEditor.PrefabUtility.ResetToPrefabState(MainCam.gameObject);
+        gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f);
         MainCam.transform.position = new Vector3(-0f, 1.25f, -6f);
          Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         MainCam.transform.LookAt(targetPosition);
         //Destroy(gameObject);
+        zForce = 25;
+        zScale = 1;
+        arrowSign.transform.localScale = new Vector3(zScale, 1, 1);
 
+        GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
     }
 
     void shoot()
