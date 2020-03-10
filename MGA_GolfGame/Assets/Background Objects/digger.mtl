@@ -1,0 +1,20 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl skin
+Kd 1 0.8104618 0.6117647
+
+newmtl wood
+Kd 0.8588235 0.4941176 0.3058824
+
+newmtl foliage
+Kd 0.172549 0.6196079 0.5568628
+
+newmtl woodDark
+Kd 0.6392157 0.3647059 0.227451
+
+newmtl _defaultMat
+Kd 1 1 1
+
+newmtl stone
+Kd 0.627451 0.7803922 0.8196079
+

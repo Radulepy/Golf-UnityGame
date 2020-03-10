@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl metal
+Kd 0.2156863 0.7686275 0.654902
+
+newmtl stone
+Kd 0.627451 0.7803922 0.8196079
+

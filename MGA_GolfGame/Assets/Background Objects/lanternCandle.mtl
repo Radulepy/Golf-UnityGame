@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl metal
+Kd 0.2156863 0.7686275 0.654902
+
+newmtl wax
+Kd 0.9098039 0.8901961 0.8
+

@@ -1,0 +1,11 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl pumpkin
+Kd 0.9803922 0.4705882 0.2
+
+newmtl metal
+Kd 0.2156863 0.7686275 0.654902
+
+newmtl light
+Kd 0.9528302 0.6636852 0.08539513
+
