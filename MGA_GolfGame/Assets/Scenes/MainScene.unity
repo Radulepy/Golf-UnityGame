@@ -12216,7 +12216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe689eb0c8057d49b03e0dbcccc011f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nrOfShots: 0
   ShotsText: {fileID: 1519416674}
 --- !u!4 &1265682326
 Transform:
@@ -16545,7 +16544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71cb1989be35348ec8881d7487a35a13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7499996
+      value: -1.42
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 71cb1989be35348ec8881d7487a35a13, type: 3}
       propertyPath: m_LocalPosition.y
