@@ -12,6 +12,10 @@ public class CameraController : MonoBehaviour
     public float minY = 0.5f;
     public float maxY = 4f;
 
+    private void Start()
+    {
+   
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // if you press ESC, then you will block the camera in present position;
