@@ -8,6 +8,8 @@ ModelImporter:
     400000: lightpost
     400002: //RootNode
     2100000: lightpostMat
+    2100002: trainGrey
+    2100004: _defaultMat
     2300000: lightpost
     3300000: lightpost
     4300000: lightpost

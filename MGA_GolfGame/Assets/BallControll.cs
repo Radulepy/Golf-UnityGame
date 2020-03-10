@@ -102,6 +102,7 @@ public class BallControll : MonoBehaviour
         }
 
         // TODO: SET COLOR
+        /*
         if (zScale == 1)
         {
             arrowSign.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
@@ -110,7 +111,7 @@ public class BallControll : MonoBehaviour
         if(zScale != 1)
         {
             arrowSign.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
-        }
+        }*/
 
     }
 
@@ -130,7 +131,7 @@ public class BallControll : MonoBehaviour
 
         //UnityEditor.PrefabUtility.ResetToPrefabState(this.gameObject);
         // UnityEditor.PrefabUtility.ResetToPrefabState(MainCam.gameObject);
-        gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f);
+        gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f); // POZITIA MINGII !!----------------------!!
         MainCam.transform.position = new Vector3(-0f, 1.25f, -6f);
          Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         MainCam.transform.LookAt(targetPosition);
