@@ -1,0 +1,47 @@
+# Made using Asset Forge (www.assetforge.io) version 1.3 
+
+newmtl green (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.149 0.736 0.47 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl border (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.204 0.275 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl green (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.149 0.736 0.47 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl border (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.204 0.275 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl dark (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.227 0.227 0.227 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl metal (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.729 0.875 0.922 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl blue (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.235 0.714 0.918 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl metal (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.729 0.875 0.922 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl blue (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.235 0.714 0.918 
+Ks 0.330000 0.330000 0.330000 
+
