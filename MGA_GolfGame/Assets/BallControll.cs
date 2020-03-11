@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 //MAXIM VALUES:
 // Force = 1000
@@ -29,6 +30,9 @@ public class BallControll : MonoBehaviour
 
 
 
+    public AudioSource Hit;
+    public AudioSource End;
+    public AudioSource Reset;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +41,7 @@ public class BallControll : MonoBehaviour
         {
 
             StartCoroutine(ExampleCoroutine());
-
+         
         }
 
 
@@ -65,7 +69,7 @@ public class BallControll : MonoBehaviour
         }
         if ((GetComponent<Rigidbody>().velocity == Vector3.zero) && (rotationReset == false))
         {
-
+            
 
             GameObject.Find("arrow").transform.localScale = new Vector3(1, 1, 1); // make arrow visible\
             transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
@@ -78,6 +82,7 @@ public class BallControll : MonoBehaviour
 
         if ((isMoving == true) && (GetComponent<Rigidbody>().velocity == Vector3.zero))
         {
+            playReset();
             rotationReset = false;
             isMoving = false;
             count = true;
@@ -120,18 +125,19 @@ public class BallControll : MonoBehaviour
 
     IEnumerator ExampleCoroutine()
     {
+      
 
         Debug.Log("Touched The Ground!");
 
 
         yield return new WaitForSeconds(2); // TODO SET A RESTART BUTTON VISIBLE!
-
+        
         GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // arrow invisible 
 
 
         //UnityEditor.PrefabUtility.ResetToPrefabState(this.gameObject);
         // UnityEditor.PrefabUtility.ResetToPrefabState(MainCam.gameObject);
-        gameObject.transform.position = new Vector3(-0.7f, 0.17f, -6.2f); // POZITIA MINGII !!----------------------!!
+        gameObject.transform.position = new Vector3(-0.7f, 0.27f, -6.2f); // POZITIA MINGII !!----------------------!!
         MainCam.transform.position = new Vector3(-0f, 1.25f, -6f);
          Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         MainCam.transform.LookAt(targetPosition);
@@ -147,7 +153,9 @@ public class BallControll : MonoBehaviour
     {
         if (GetComponent<Rigidbody>().velocity == Vector3.zero)
         {
-            
+
+            Hit.Play();
+
 
             GameObject.Find("arrow").transform.localScale = new Vector3(0, 0, 0); // make arrow invisible
 
@@ -175,13 +183,35 @@ public class BallControll : MonoBehaviour
 
         }
 
+    
+
         void OnTriggerEnter(Collider other)
         {
+            playEnd();
             Debug.Log("BALL COLIDED WITH TRIGGER");
-            EditorSceneManager.LoadScene("MainScene"); // go to next scene after ball entered hole
+            //EditorSceneManager.LoadScene("MainScene"); // go to next scene after ball entered hole
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
 
 
     }
+
+
+
+    public void playHit()
+    {
+        Hit.Play();
+    }
+    public void playEnd()
+    {
+        Reset.Play();
+    }
+    public void playReset()
+    {
+        Reset.Play();
+    }
+
+
 }
 // update
