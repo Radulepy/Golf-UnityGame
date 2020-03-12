@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //MAXIM VALUES:
 // Force = 1000
@@ -13,7 +14,7 @@ using UnityEngine.SceneManagement;
 // check if ball position is under the Track (Ball falls of the board) & reset level
 public class BallControll : MonoBehaviour
 {
-    public float zForce = 25; // gravity 'Z' Button
+    public float zForce = 50; // gravity 'Z' Button
     public float zScale = 1;
 
     public bool isMoving = false;
@@ -28,7 +29,7 @@ public class BallControll : MonoBehaviour
 
     PlayerStats playerStats = new PlayerStats();
 
-
+    public Text power;
 
     public AudioSource Hit;
     public AudioSource End;
@@ -37,6 +38,9 @@ public class BallControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        power.text = "FORCE: "+(zForce );
+
         if (transform.position.y < 0.05f) // BALL FELT OF THE TRACK! (RESTART)
         {
 
@@ -46,13 +50,13 @@ public class BallControll : MonoBehaviour
 
 
         // transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        if (Input.GetKeyDown("w") && zForce < 1000) // adds 100 force
+        if (Input.GetKeyDown("w") && zForce <= 900) // adds 100 force
         {
             zForce += 100;
             zScale += 0.5f;
             arrowSign.transform.localScale = new Vector3(zScale, 1, 1);
         }
-        if (Input.GetKeyDown("s") && zForce > 0) // adds 10 force
+        if (Input.GetKeyDown("s") && zForce >25) // adds 10 force
         {
             zForce -= 50;
             zScale -= 0.25f;
