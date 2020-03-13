@@ -11,4 +11,10 @@ public class EndMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    public void Dd()
+    {
+        Debug.Log("ASD");
+    }
+
 }
