@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 390736991}
   - component: {fileID: 390736990}
   - component: {fileID: 390736993}
+  - component: {fileID: 390736994}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -191,7 +192,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 390736991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 397557372}
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &390736991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +251,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6671f5176efaa486e874822eaea180e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &390736994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390736988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0194a6c54a521194ba0df40ac5193d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &397557369
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397557371}
   - component: {fileID: 397557370}
+  - component: {fileID: 397557372}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -283,6 +308,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &397557372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397557369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0194a6c54a521194ba0df40ac5193d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &425669645
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +477,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628628848}
   m_LocalRotation: {x: -0.00082849443, y: 0.0016093455, z: -0.017687345, w: 0.9998419}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425669646}
@@ -861,12 +898,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 31ff3868794a14057b01446fbd54f823, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 397557372}
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1032,12 +1069,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
