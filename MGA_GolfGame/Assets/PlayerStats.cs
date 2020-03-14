@@ -15,6 +15,11 @@ public class PlayerStats : MonoBehaviour
         
     }
 
+    public void resetShot()
+    {
+        nrOfShots = 0;
+    }
+
     public void addShot()
     {
         nrOfShots+=1;
